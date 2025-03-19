@@ -1,0 +1,10 @@
+PyQt6
+pydub
+librosa
+matplotlib
+mutagen
+# hashlib
+numpy
+opencv-python
+reportlab
+mysql-connector-python
