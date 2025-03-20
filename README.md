@@ -12,7 +12,6 @@ This project is a **GUI-based Audio Integrity Checking Application** developed a
 - **Spectrogram Analysis:** Visualizes audio characteristics using Mel spectrograms.
 - **Metadata Extraction:** Retrieves bit rate, sample rate, and audio channels.
 - **Database Storage:** Stores file hashes in a **MySQL database** for future comparison.
-- **Integrity Reports:** Generates a **PDF report** of the integrity check.
 
 ---
 
@@ -23,19 +22,15 @@ This project is a **GUI-based Audio Integrity Checking Application** developed a
 git clone https://github.com/your-repo/audio-integrity-checker.git
 cd audio-integrity-checker
 ```
+
 ### **Step 2: Install Dependencies**
 ```sh
 pip install -r requirements.txt
 ```
-### **Step 3: Set up MySQL Database**
-Before running the application, set up the MySQL database:
+
+### **Step 3: Run the Application**
 ```sh
-python -c "import database; database.create_database()"
-```
-Modify database.py if you need to update MySQL credentials.
-### **Step 4: Run the Application**
-```sh
-python gui.py
+python main.py
 ```
 
 ---
@@ -64,4 +59,11 @@ audio_integrity_checker/
 3. **If the hash matches**, the file is verified as **authentic**.
 4. **If the hash differs**, the file may have been **tampered with**.
 5. **A spectrogram is displayed** to visualize audio characteristics.
-6. s**A PDF integrity report is generated**, detailing the verification results.
+
+---
+
+## NOTES
+
+- **Before verifying integrity**, the user must store the original hash first.
+- If the file is moved, renamed, or modified, its hash will **not match** the stored hash.
+- The app does not detect **what changes were made**—only whether the file was modified.
