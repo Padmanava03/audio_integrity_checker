@@ -49,7 +49,7 @@ audio_integrity_checker/
 ## How It Works
 
 1. **User selects an audio file** through the GUI.
-2. **SHA-256 hash is generated** and compared with the stored hash in the MySQL database.
+2. **SHA-256 hash is generated** and compared with the stored hash in the SQLite3 database.
 3. **If the hash matches**, the file is verified as **authentic**.
 4. **If the hash differs**, the file may have been **tampered with**.
 
