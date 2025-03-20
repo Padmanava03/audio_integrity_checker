@@ -8,10 +8,7 @@ This project is a **GUI-based Audio Integrity Checking Application** developed a
 ## Features
 - **GUI Interface:** Simple and user-friendly PyQt6 interface for file selection.
 - **Cryptographic Hashing:** Uses SHA-256 to generate and store hashes for verification.
-- **Audio Fingerprinting:** Checks for any unauthorized modifications.
-- **Spectrogram Analysis:** Visualizes audio characteristics using Mel spectrograms.
-- **Metadata Extraction:** Retrieves bit rate, sample rate, and audio channels.
-- **Database Storage:** Stores file hashes in a **MySQL database** for future comparison.
+- **Database Storage:** Stores file hashes in a **sqlite3 database** for future comparison.
 
 ---
 
@@ -43,11 +40,7 @@ audio_integrity_checker/
 │── requirements.txt          # Dependencies
 │── gui.py                    # GUI implementation using PyQt
 │── audio_processing.py       # Handles hashing, fingerprinting, and spectrogram generation
-│── reports.py                # Generates integrity reports
 │── database.py               # Manages hash storage for verification
-│── fingerprints/             # Stores fingerprints for verification
-│── reports/                  # Stores generated integrity reports
-│── samples/                  # Sample audio files for testing
 ```
 
 ---
@@ -65,5 +58,5 @@ audio_integrity_checker/
 ## NOTES
 
 - **Before verifying integrity**, the user must store the original hash first.
-- If the file is moved, renamed, or modified, its hash will **not match** the stored hash.
+- If the file is modified, its hash will **not match** the stored hash.
 - The app does not detect **what changes were made**—only whether the file was modified.
