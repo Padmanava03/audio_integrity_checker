@@ -8,7 +8,7 @@ This project is a **GUI-based Audio Integrity Checking Application** developed a
 ## Features
 - **GUI Interface:** Simple and user-friendly PyQt6 interface for file selection.
 - **Cryptographic Hashing:** Uses SHA-256 to generate and store hashes for verification.
-- **Database Storage:** Stores file hashes in a **MySQL database** for future comparison.
+- **Database Storage:** Stores file hashes in a **SQLite3 database** for future comparison.
 
 ---
 
