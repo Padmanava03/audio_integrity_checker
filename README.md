@@ -52,7 +52,6 @@ audio_integrity_checker/
 2. **SHA-256 hash is generated** and compared with the stored hash in the MySQL database.
 3. **If the hash matches**, the file is verified as **authentic**.
 4. **If the hash differs**, the file may have been **tampered with**.
-5. **A spectrogram is displayed** to visualize audio characteristics.
 
 ---
 
